@@ -108,7 +108,6 @@ public class FacebookLoginPlugin implements MethodCallHandler {
             this.callbackManager = CallbackManager.Factory.create();
             this.loginManager = LoginManager.getInstance();
             this.resultDelegate = new FacebookLoginResultDelegate(callbackManager);
-
             loginManager.registerCallback(callbackManager, resultDelegate);
             registrar.addActivityResultListener(resultDelegate);
         }
